@@ -40,6 +40,10 @@ fi
 ./install.sh
 ./setup-lightdm.sh
 
+git -C ~/ clone https://github.com/Otard95/dotfiles.git
+cd ~/dotfiles
+./install
+
 echo ""
 echo "Done!"
 echo "Please reboot your system"
