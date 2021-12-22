@@ -1,12 +1,14 @@
-pacages=(
+#!/bin/bash
+
+pacages=( \
   # Core
-  NetworkManager \
+  network-manager \
   xorg \
   i3 \
   i3blocks \
-  i3lock \
+  i3lock-fancy \
   i3status \
-  i3-gaps \
+  lightdm \
   # Terminal
   kitty \
   neofetch \
