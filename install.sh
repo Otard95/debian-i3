@@ -27,9 +27,3 @@ source ./utils.sh
 
 sub-header "Install packages"
 sudo apt update && sudo apt upgrade -y && sudo apt install -y ${pacages[@]}
-
-sub-header "Setup snap"
-sudo snap install core
-
-sub-header "Install NordPass"
-sudo snap install nordpass

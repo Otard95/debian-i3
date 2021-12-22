@@ -41,13 +41,7 @@ header "Install packages"
 ./install.sh
 
 header "Setup NetworkManager and re-astablish internet connection"
-./setup-network-manager.sh "$ssid" "$passphrase"
-
-header "Setup dotfiles"
-./setup-dotfiles.sh
-
-header "Setup lightdm"
-./setup-lightdm.sh
+./setup-network-manager.sh
 
 echo ""
 echo "Done!"
