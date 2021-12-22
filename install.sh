@@ -2,6 +2,7 @@
 
 pacages=( \
   # Core
+  network-manager \
   xorg \
   i3 \
   i3blocks \
@@ -18,8 +19,17 @@ pacages=( \
   git \
   # Fonts
   fonts-firacode \
+  # Snap
+  snapd \
 )
 
+source ./utils.sh
+
+sub-header "Install packages"
 sudo apt update && sudo apt upgrade -y && sudo apt install -y ${pacages[@]}
 
-./install-brave.sh
+sub-header "Setup snap"
+sudo snap install core
+
+sub-header "Install NordPass"
+sudo snap install nordpass

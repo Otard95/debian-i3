@@ -32,14 +32,33 @@ if [[ -z $wlanDevice ]] || [[ -z $ssid ]] || [[ -z $passphrase ]]; then
   usage
 fi
 
+source ./utils.sh
+
+header "Initial internet connection with wpa_supplicant"
 ./wpa-one-time-connect.sh $wlanDevice "$ssid" "$passphrase"
 
-./install-network-manager.sh
+header "Install packages"
+./install.sh
+
+header "Setup NetworkManager and re-astablish internet connection"
 ./setup-network-manager.sh "$ssid" "$passphrase"
 
-./install.sh
+header "Setup dotfiles"
+./setup-dotfiles.sh
+
+header "Setup lightdm"
 ./setup-lightdm.sh
 
 echo ""
 echo "Done!"
-echo "Please reboot your system"
+
+while true; do
+  read -p "Reboot now? (y/n) " answer
+  case $answer in
+    [Yy] )   sudo systemctl reboot; break;;
+    [Yy]es ) sudo systemctl reboot; break;;
+    [Nn] )   break;;
+    [Nn]o )  break;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done

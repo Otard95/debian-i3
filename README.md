@@ -82,3 +82,6 @@ Document install process
 
 Either connect to internet and clone this or mount a usb with the source and
 run `./setup.sh`
+
+A reboot is required at this point.  
+After you can optionally use the `./install-brave.sh` script to install brave-browser.
