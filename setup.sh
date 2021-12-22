@@ -34,9 +34,11 @@ fi
 
 ./wpa-one-time-connect.sh $wlanDevice "$ssid" "$passphrase"
 
+./install-network-manager.sh
+./setup-network-manager.sh "$ssid" "$passphrase"
+
 ./install.sh
 ./setup-lightdm.sh
-./setup-network-manager.sh
 
 echo ""
 echo "Done!"
