@@ -9,3 +9,4 @@ echo "Wait for NetworkManager to restart..."
 sleep 5
 echo "Connecting to your wifi network..."
 nmcli device wifi connect "$1" password "$2"
+sleep 1
