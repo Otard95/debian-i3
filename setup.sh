@@ -36,7 +36,7 @@ fi
 
 ./install.sh
 ./setup-network-manager.sh
-./setup-lightdm
+./setup-lightdm.sh
 
 echo "Done!"
 echo "Please reboot your system"
