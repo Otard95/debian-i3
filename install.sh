@@ -12,7 +12,8 @@ pacages=( \
   kitty \
   neofetch \
   # Tools
-  curl
+  apt-transport-https \
+  curl \
   vim \
   git \
   # Fonts

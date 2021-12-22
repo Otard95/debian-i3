@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo apt install apt-transport-https -y
-
 sleep 1
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
