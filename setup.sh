@@ -28,6 +28,10 @@ while getopts ":w:s:p:" opt; do
   esac
 done
 
+if [[ -z $wlanDevice ]] || [[ -z $ssid ]] || [[ -z $passphrase ]]; then
+  usage
+fi
+
 ./wpa-one-time-connect.sh $wlanDevice "$ssid" "$passphrase"
 
 ./install.sh
