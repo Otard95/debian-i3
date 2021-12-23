@@ -38,7 +38,7 @@ header "Initial internet connection with wpa_supplicant"
 ./wpa-one-time-connect.sh $wlanDevice "$ssid" "$passphrase"
 
 header "Install NetworkManager"
-sudo apt install network-manager
+sudo apt install -y network-manager
 
 header "Setup NetworkManager and add your network"
 ./setup-network-manager.sh "$ssid" "$passphrase"
