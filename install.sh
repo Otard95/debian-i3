@@ -2,7 +2,6 @@
 
 pacages=( \
   # Core
-  network-manager \
   xorg \
   i3 \
   i3blocks \
@@ -17,13 +16,26 @@ pacages=( \
   curl \
   vim \
   git \
+  xclip \
   # Fonts
   fonts-firacode \
-  # Snap
-  snapd \
 )
+after_install=()
 
 source ./utils.sh
 
-sub-header "Install packages"
+read -p "Setup snap? (Y/n): " answer
+if [[ -z "$answer" ]] || [[ $answer =~ ^[Nn]o?$ ]]; then
+  pacages+=("snapd")
+  after_install+=("./setup-snap.sh")
+fi
+
+sub_header "Install packages"
 sudo apt update && sudo apt upgrade -y && sudo apt install -y ${pacages[@]}
+
+if [[ ${#after_install[@]} -gt 0 ]]; then
+  sub_header "Post install"
+  for action in "${after_install[@]}"; do
+    eval "$action"
+  done
+fi

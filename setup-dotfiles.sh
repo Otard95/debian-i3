@@ -4,16 +4,16 @@ source ./utils.sh
 
 backDir=$(pwd)
 
-sub-header "git clone dotfiles repo"
+sub_header "git clone dotfiles repo"
 cd ~/
 git clone https://github.com/Otard95/dotfiles.git
 cd ~/dotfiles
 
-sub-header "Setup git remotes"
+sub_header "Setup git remotes"
 git remote set-url origin git@github.com:Otard95/dotfiles.git
 git remote add https https://github.com/Otard95/dotfiles.git
 
-sub-header "Dotbot install"
+sub_header "Dotbot install"
 ./install
 
 cd $backDir

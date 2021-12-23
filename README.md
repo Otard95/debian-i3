@@ -80,8 +80,13 @@ Document install process
 
 ## Setup
 
-Either connect to internet and clone this or mount a usb with the source and
-run `./setup.sh`
+Either connect to internet and clone this repo or mount a usb with the source.
+
+Now you can run `./setup-network.sh`  
+This will install and setup NetworkManager so we have a stable network connection.  
+You should rebot after this.
+
+Now we setup all the core stuff. Run `./setup-core.sh`
 
 A reboot is required at this point.  
 After you can optionally use the `./install-brave.sh` script to install brave-browser.
