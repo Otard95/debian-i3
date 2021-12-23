@@ -9,7 +9,7 @@ header "Setup dotfiles"
 ./setup-dotfiles.sh
 
 header "Setup debian-i3 repo"
-./setup-debian-i3.sh
+./setup-debian-i3-repo.sh
 
 header "Setup lightdm"
 ./setup-lightdm.sh
