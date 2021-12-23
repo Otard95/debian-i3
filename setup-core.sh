@@ -8,6 +8,9 @@ header "Install packages"
 header "Setup dotfiles"
 ./setup-dotfiles.sh
 
+header "Setup debian-i3 repo"
+./setup-debian-i3.sh
+
 header "Setup lightdm"
 ./setup-lightdm.sh
 

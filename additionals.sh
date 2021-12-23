@@ -19,11 +19,11 @@ if prompt_yes_no "Install NordPass"; then
 fi
 
 if prompt_yes_no "Install NordVPN"; then
-  apt_pacages+=("./packages/nordvpn.deb")
+  script_installs+=("./install-scripts/nordvpn.sh")
 fi
 
 if prompt_yes_no "Install VSCode"; then
-  apt_pacages+=(code)
+  script_installs+=("./install-scripts/code.sh")
 fi
 
 if prompt_yes_no "Install Brave"; then
