@@ -73,7 +73,7 @@ fi
 
 if [[ ${#snap_pacages[@]} -gt 0 ]]; then
   sub_header "SNAP install"
-  sudo snap install core "${snap_pacages[@]}";
+  sudo snap install "${snap_pacages[@]}";
 fi
 
 if [[ ${#snap_classic_pacages[@]} -gt 0 ]]; then
