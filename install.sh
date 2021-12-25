@@ -7,7 +7,6 @@ packages=( \
   i3 \
   i3blocks \
   i3lock-fancy \
-  i3status \
   lightdm \
   picom \
   nitrogen \
