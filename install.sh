@@ -21,6 +21,7 @@ packages=( \
   xclip \
   # Fonts
   fonts-firacode \
+  fonts-font-awesome \
 )
 after_install=()
 dry_run=0
