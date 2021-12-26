@@ -1,4 +1,4 @@
-# DEBIAN i3
+# Debian i3
 
 This repo will include all the steps I'll use to setup Debian Linux with i3 for
 ground up.
