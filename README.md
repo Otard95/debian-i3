@@ -1,7 +1,7 @@
 # Debian i3
 
-This repo will include all the steps I'll use to setup Debian Linux with i3 for
-ground up.
+This repo will include all the steps I'll use to setup Debian Linux with i3 form
+the ground up.
 
 ## Debian Image
 
@@ -88,5 +88,5 @@ You should rebot after this.
 
 Now we setup all the core stuff. Run `./setup-core.sh`
 
-A reboot is required at this point.  
-After you can optionally use the `./install-brave.sh` script to install brave-browser.
+A reboot is recomended at this point.  
+After you can optionally use the `./additional.sh` script to select some extra stuff  to install.
