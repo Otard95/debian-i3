@@ -64,6 +64,10 @@ if prompt_yes_no "Install GH CLI"; then
   script_installs+=("./install-scripts/gh.sh")
 fi
 
+if prompt_yes_no "Install GIMP"; then
+  apt_pacages+=(gimp)
+fi
+
 ## Install selected
 
 if [[ ${#apt_pacages[@]} -gt 0 ]]; then
