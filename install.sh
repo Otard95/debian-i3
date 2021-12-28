@@ -18,6 +18,8 @@ packages=( \
   vim \
   git \
   xclip \
+  pulseaudio \
+  pavucontrol \
   # Fonts
   fonts-firacode \
   fonts-font-awesome \
