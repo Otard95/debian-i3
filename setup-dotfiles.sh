@@ -15,5 +15,6 @@ git remote add https https://github.com/Otard95/dotfiles.git
 
 sub_header "Dotbot install"
 ./install
+./install-root.sh
 
 cd $backDir
