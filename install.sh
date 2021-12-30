@@ -17,6 +17,7 @@ packages=( \
   make \
   autoconf \
   gcc \
+  acpi \
   curl \
   vim \
   git \
