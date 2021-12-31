@@ -17,9 +17,9 @@ packages=( \
   # Tools
   make \
   autoconf \
-  # - Required for i3blocks 1.5 build
   pkg-config \
   gcc \
+  build-essential \
   acpi \
   curl \
   vim \
