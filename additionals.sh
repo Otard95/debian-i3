@@ -10,11 +10,6 @@ after_install=()
 
 ## Select installs
 
-if prompt_yes_no "Install i3blocks v1.5"; then
-  apt_pacages+=(pkg-config) # build requirement
-  script_installs+=("./install-scripts/i3blocks.sh")
-fi
-
 if prompt_yes_no "Install NordPass"; then
   apt_pacages+=( \
     gnome-keyring \
