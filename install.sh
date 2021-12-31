@@ -5,8 +5,6 @@ packages=( \
   apt-transport-https \
   xorg \
   i3 \
-  # i3blocks \
-  i3lock-fancy \
   lightdm \
   ukui-greeter \
   picom \
@@ -46,6 +44,32 @@ read -p "Setup snap? (Y/n): " answer
 if [[ -z "$answer" ]] || [[ $answer =~ ^[Yy](es)?$ ]]; then
   packages+=("snapd")
   after_install+=("./setup-snap.sh")
+fi
+
+read -p "Install Betterlockscreen? (Y/n): " answer
+if [[ -z "$answer" ]] || [[ $answer =~ ^[Yy](es)?$ ]]; then
+  packages+=( \
+    libpam0g-dev \
+    libcairo2-dev \
+    libfontconfig1-dev \
+    libxcb-composite0-dev \
+    libev-dev \
+    libx11-xcb-dev \
+    libxcb-xkb-dev \
+    libxcb-xinerama0-dev \
+    libxcb-randr0-dev \
+    libxcb-image0-dev \
+    libxcb-util0-dev \
+    libxcb-xrm-dev \
+    libxcb-xtest0-dev \
+    libxkbcommon-dev \
+    libxkbcommon-x11-dev \
+    libjpeg-dev \
+    bc \
+  )
+  after_install+=("./install-scripts/betterlockscreen.sh")
+else
+  packages+=(i3lock-fancy)
 fi
 
 if [[ $dry_run -ne 0 ]]; then
