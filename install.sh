@@ -5,7 +5,7 @@ packages=( \
   apt-transport-https \
   xorg \
   i3 \
-  i3blocks \
+  # i3blocks \
   i3lock-fancy \
   lightdm \
   ukui-greeter \
@@ -17,6 +17,8 @@ packages=( \
   # Tools
   make \
   autoconf \
+  # - Required for i3blocks 1.5 build
+  pkg-config \
   gcc \
   acpi \
   curl \
@@ -29,7 +31,7 @@ packages=( \
   fonts-firacode \
   fonts-font-awesome \
 )
-after_install=()
+after_install=("./install-scripts/i3blocks.sh")
 dry_run=0
 
 for arg in $@; do
