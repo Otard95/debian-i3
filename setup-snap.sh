@@ -1,9 +1,11 @@
 #!/bin/bash
 
-echo " - Enable and restart snapd"
+source ./utils.sh
+
+sub_header "Enable and restart snapd"
 sudo systemctl enable snapd.service
 sudo systemctl restart snapd.service
 sleep 2
 
-echo " - Install snap core"
+sub_header  "Install snap core"
 sudo snap install core
