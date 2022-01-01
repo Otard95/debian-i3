@@ -12,7 +12,7 @@ sudo ./install-i3lock-color.sh
 
 cd $back_dir
 
-curl https://git.io/JZyxV -Lo ./betterlockscreen-install.sh
+sudo curl https://git.io/JZyxV -Lo ./betterlockscreen-install.sh
 sudo chmod +x ./betterlockscreen-install.sh
 sudo ./betterlockscreen-install.sh system v4.0.3
-rm ./betterlockscreen-install.sh
+sudo rm ./betterlockscreen-install.sh

@@ -28,6 +28,7 @@ packages=( \
   libjpeg-dev \
   ## - Required for betterlockscreen
   bc \
+  imagemagick \
   # Terminal
   kitty \
   neofetch \
