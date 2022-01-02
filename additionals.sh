@@ -56,6 +56,10 @@ if prompt_yes_no "Install Docker"; then
   script_installs+=("./install-scripts/docker.sh")
 fi
 
+if prompt_yes_no "Install Dockera Compose"; then
+  script_installs+=("./install-scripts/docker-compose.sh")
+fi
+
 if prompt_yes_no "Install Ranger"; then
   apt_pacages+=(ranger)
 fi
@@ -66,6 +70,10 @@ fi
 
 if prompt_yes_no "Install GIMP"; then
   apt_pacages+=(gimp)
+fi
+
+if prompt_yes_no "Install fzf"; then
+  apt_pacages+=(fzf)
 fi
 
 ## Install selected
