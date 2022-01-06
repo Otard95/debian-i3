@@ -10,6 +10,8 @@ after_install=()
 
 ## Select installs
 
+echo "Select apps to install"
+
 if prompt_yes_no "Install NordPass"; then
   apt_pacages+=( \
     gnome-keyring \
@@ -46,6 +48,13 @@ if prompt_yes_no "Install Slack"; then
   snap_classic_pacages+=(slack)
 fi
 
+if prompt_yes_no "Install GIMP"; then
+  apt_pacages+=(gimp)
+fi
+
+echo
+echo "Select tools to install"
+
 if prompt_yes_no "Install Docker"; then
   apt_pacages+=( \
     ca-certificates \
@@ -56,7 +65,7 @@ if prompt_yes_no "Install Docker"; then
   script_installs+=("./install-scripts/docker.sh")
 fi
 
-if prompt_yes_no "Install Dockera Compose"; then
+if prompt_yes_no "Install Docker Compose"; then
   script_installs+=("./install-scripts/docker-compose.sh")
 fi
 
@@ -68,12 +77,12 @@ if prompt_yes_no "Install GH CLI"; then
   script_installs+=("./install-scripts/gh.sh")
 fi
 
-if prompt_yes_no "Install GIMP"; then
-  apt_pacages+=(gimp)
-fi
-
 if prompt_yes_no "Install fzf"; then
   apt_pacages+=(fzf)
+fi
+
+if prompt_yes_no "Install Barrier"; then
+  apt_pacages+=(barrier)
 fi
 
 ## Install selected
