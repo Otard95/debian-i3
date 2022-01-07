@@ -20,7 +20,8 @@ echo " -> Get .deb"
 curl https://bin.appgate-sdp.com/5.1/client/appgate-sdp-headless_5.1.2_amd64.deb -o ./appgade.deb
 
 echo " -> Install"
-sudo apt update && sudo apt install -y -f ./appgade.deb
+sudo dpkg -i --ignore-depends=libappindicator1 ./appgate-sdp_5.1.2_amd64.deb
+# sudo apt update && sudo apt install -y -f ./appgade.deb
 
 echo " -> Cleanup"
 rm appgade.deb
