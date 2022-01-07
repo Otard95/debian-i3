@@ -81,6 +81,14 @@ if prompt_yes_no "Install fzf"; then
   apt_pacages+=(fzf)
 fi
 
+if prompt_yes_no "Install thefuck"; then
+  apt_pacages+=(python3-dev python3-pip python3-setuptools)
+  script_installs+=("pip3 install thefuck --user")
+fi
+
+echo
+echo "Select other installs"
+
 if prompt_yes_no "Install Barrier"; then
   apt_pacages+=(barrier)
 fi
