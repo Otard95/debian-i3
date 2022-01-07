@@ -3,14 +3,6 @@
 packages=( \
   # Core
   apt-transport-https \
-  xorg \
-  i3 \
-  lightdm \
-  ukui-greeter \
-  picom \
-  nitrogen \
-  ## - Required for i3lock-color
-  libpam0g-dev \
   libcairo2-dev \
   libfontconfig1-dev \
   libxcb-composite0-dev \
@@ -26,7 +18,14 @@ packages=( \
   libxkbcommon-dev \
   libxkbcommon-x11-dev \
   libjpeg-dev \
-  ## - Required for betterlockscreen
+  # xdorg, i3, lightdm etc.
+  xorg \
+  i3 \
+  lightdm \
+  ukui-greeter \
+  picom \
+  nitrogen \
+  libpam0g-dev \
   bc \
   imagemagick \
   # Terminal
@@ -45,6 +44,7 @@ packages=( \
   xclip \
   pulseaudio \
   pavucontrol \
+  ufw \
   # Fonts
   fonts-firacode \
   fonts-font-awesome \
