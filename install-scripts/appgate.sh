@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.$(date +%s).BAK
 sudo echo "deb http://security.debian.org/debian-security buster/updates main" >> /etc/apt/sources.list
 curl https://bin.appgate-sdp.com/5.1/client/appgate-sdp_5.1.2_amd64.deb -o ./appgade.deb
 # curl https://bin.appgate-sdp.com/5.1/client/appgate-sdp-headless_5.1.2_amd64.deb -o ./appgade.deb
