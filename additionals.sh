@@ -85,6 +85,10 @@ if prompt_yes_no "Install Barrier"; then
   apt_pacages+=(barrier)
 fi
 
+if prompt_yes_no "Install Appgate"; then
+  script_installs+=("./install-scripts/appgate.sh")
+fi
+
 ## Install selected
 
 if [[ ${#apt_pacages[@]} -gt 0 ]]; then
