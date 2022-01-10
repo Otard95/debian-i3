@@ -41,7 +41,7 @@ header "Install NetworkManager"
 sudo apt install -y network-manager
 
 header "Setup NetworkManager and add your network"
-./setup-network-manager.sh "$ssid" "$passphrase"
+./setup-network-manager.sh "$ssid" "$passphrase" "$wlanDevice"
 
 echo ""
 echo "Done!"

@@ -11,5 +11,5 @@ sleep 2
 
 sub_header "Connect you your network"
 nmcli device wifi connect "$1" password "$2"
+nmcli d modify $3 ipv4.dns "192.168.1.1,1.0.0.1,1.1.1.1"
 sleep 1
-
