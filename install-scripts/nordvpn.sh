@@ -15,7 +15,9 @@ curl https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.0.0
 
 echo " -> Install"
 sudo apt install -y ./nordvpn.deb
+sudo apt update
+sudo apt --fix-broken -y install
+sudo apt install -y nordvpn
 
 echo " -> Cleanup"
 rm nordvpn.deb
-
