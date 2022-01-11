@@ -2,7 +2,7 @@
 
 source ./utils.sh
 
-sub_header "Install brave"
+sub_header "Install docker"
 
 docker -v &>/dev/null
 if [[ $? -eq 0 ]]; then

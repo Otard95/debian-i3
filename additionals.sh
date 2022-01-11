@@ -83,7 +83,7 @@ fi
 
 if prompt_yes_no "Install thefuck"; then
   apt_pacages+=(python3-dev python3-pip python3-setuptools)
-  script_installs+=("pip3 install thefuck --user")
+  script_installs+=("sub_header 'Install thefuck'" "pip3 install thefuck --user")
 fi
 
 echo

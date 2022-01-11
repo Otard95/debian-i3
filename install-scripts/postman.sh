@@ -2,7 +2,7 @@
 
 source ./utils.sh
 
-sub_header "Install VSCode"
+sub_header "Install Potman"
 
 if [[ -d /usr/src/Postman ]]; then
   echo " -> Allready installed"
