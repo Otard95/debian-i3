@@ -44,7 +44,10 @@ packages=( \
   xclip \
   pulseaudio \
   pavucontrol \
+  pulseaudio-module-bluetooth \
   ufw \
+  ripgrep \
+  flameshot \
   # Fonts
   fonts-firacode \
   fonts-font-awesome \
