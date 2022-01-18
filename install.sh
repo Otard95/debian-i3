@@ -39,7 +39,7 @@ packages=( \
   build-essential \
   acpi \
   curl \
-  vim \
+  neovim \
   git \
   xclip \
   pulseaudio \
@@ -63,8 +63,7 @@ done
 
 source ./utils.sh
 
-read -p "Setup snap? (Y/n): " answer
-if [[ -z "$answer" ]] || [[ $answer =~ ^[Yy](es)?$ ]]; then
+if prompt_yes_no "Setup snap"; then
   packages+=("snapd")
   after_install+=("./setup-snap.sh")
 fi
