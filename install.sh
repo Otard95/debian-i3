@@ -42,6 +42,7 @@ packages=( \
   neovim \
   git \
   xclip \
+  arandr \
   pulseaudio \
   pavucontrol \
   pulseaudio-module-bluetooth \
