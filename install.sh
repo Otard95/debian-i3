@@ -44,6 +44,7 @@ packages=( \
   xclip \
   xrandr \
   autorandr \
+  pmount \
   pulseaudio \
   pavucontrol \
   pulseaudio-module-bluetooth \
