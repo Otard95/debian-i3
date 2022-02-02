@@ -15,7 +15,9 @@ header "Setup lightdm"
 ./setup-lightdm.sh
 
 if prompt_yes_no "Install bootloader theme"; then
-  git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+  sudo mkdir top-5-bootloader-themes
+  sudo chown $USER top-5-bootloader-themes
+  git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes top-5-bootloader-themes
   cd Top-5-Bootloader-Themes
   sudo ./install.sh
 fi
