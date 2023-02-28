@@ -41,6 +41,7 @@ packages=( \
   acpi \
   curl \
   neovim \
+  tmux \
   git \
   git-delta \
   ripgrep \
