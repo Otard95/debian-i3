@@ -28,6 +28,7 @@ packages=( \
   libpam0g-dev \
   bc \
   imagemagick \
+  rofi \
   # Terminal
   kitty \
   neofetch \
@@ -41,19 +42,25 @@ packages=( \
   curl \
   neovim \
   git \
+  git-delta \
+  ripgrep \
+  tig \
   xclip \
   xrandr \
-  autorandr \
+  arandr \
   pmount \
   pulseaudio \
-  pavucontrol \
   pulseaudio-module-bluetooth \
+  pavucontrol \
   ufw \
   ripgrep \
   flameshot \
+  ranger \ 
+  btop \ 
   # Fonts
   fonts-firacode \
   fonts-font-awesome \
+  fontconfig \
 )
 after_install=("./install-scripts/i3blocks.sh" "./install-scripts/betterlockscreen.sh")
 dry_run=0
@@ -76,7 +83,11 @@ if [[ $dry_run -ne 0 ]]; then
   echo "After Install: ${after_install[@]}"
 else
   sub_header "Install packages"
-  sudo apt update && sudo apt upgrade -y && sudo apt install -y ${packages[@]}
+  if nala --version &> /dev/null; then
+    sudo nala install -y ${packages[@]}
+  else
+    sudo apt install -y ${packages[@]}
+  fi
 fi
 
 if [[ ${#after_install[@]} -gt 0 ]]; then

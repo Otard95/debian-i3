@@ -12,18 +12,6 @@ after_install=()
 
 echo "Select apps to install"
 
-if prompt_yes_no "Install NordPass"; then
-  apt_pacages+=( \
-    gnome-keyring \
-    libsecret-1-dev \
-  )
-  snap_pacages+=(nordpass)
-fi
-
-if prompt_yes_no "Install NordVPN"; then
-  script_installs+=("./install-scripts/nordvpn.sh")
-fi
-
 if prompt_yes_no "Install VSCode"; then
   script_installs+=("./install-scripts/code.sh")
 fi

@@ -2,6 +2,9 @@
 
 source ./utils.sh
 
+sudo apt update && sudo apt upgrade -y
+sudo apt install nala -y
+
 header "Install packages"
 ./install.sh
 
